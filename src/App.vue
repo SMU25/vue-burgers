@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import Header from "./components/Header/index.vue";
-import ContainerVue from "./components/Layouts/Container.vue";
+import Container from "./components/Layouts/Container.vue";
 </script>
 
 <template>
   <Header />
-  <ContainerVue>
+  <Container>
     <RouterView />
-  </ContainerVue>
+  </Container>
 </template>

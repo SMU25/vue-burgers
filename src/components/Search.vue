@@ -14,9 +14,9 @@ const inputValue = ref("");
   <div
     class="flex items-center justify-between max-w-112.5 w-full border border-green-primary rounded"
   >
-    <div class="p-2">
+    <div class="w-full p-2">
       <input
-        class="placeholder placeholder:text-gray-dark leading-150 outline-0"
+        class="w-full leading-150 outline-0 placeholder:text-gray-dark"
         :placeholder="PLACEHOLDER_TEXT"
         v-model="inputValue"
       />

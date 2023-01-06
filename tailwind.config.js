@@ -7,9 +7,13 @@ module.exports = {
         gray: {
           lightest: "#F3F2F1",
           hard: "#8F8F8F",
+          hardtest: "#606060",
         },
         green: {
           primary: "#70C05B",
+        },
+        orange: {
+          primary: "#FF6633",
         },
       },
       lineHeight: {
@@ -22,6 +26,8 @@ module.exports = {
 
       boxShadow: {
         "light-bottom-fog": "2px 4px 8px rgba(0, 0, 0, 0.1);",
+        "light-outer": "4px 8px 16px",
+        "top-inner": "inset 0px 2px 0px rgba(0, 0, 0, 0.2);",
       },
     },
   },

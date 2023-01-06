@@ -2,6 +2,7 @@
 import Container from "@/components/Layouts/Container.vue";
 import Logo from "@/components/Logo.vue";
 import Search from "@/components/Search.vue";
+import Button from "@/components/Button/index.vue";
 import IconCart from "@/components/Icons/IconCart.vue";
 import IconOrders from "@/components/Icons/IconOrders.vue";
 import { PATHNAMES } from "@/constants/routes";
@@ -25,11 +26,11 @@ const ORDERS_NAME_MENU_ITEM = "Orders";
               <IconOrders />
             </MenuItem>
           </RouterLink>
-          <button>
+          <Button>
             <MenuItem class="ml-6" :name="CART_NAME_MENU_ITEM">
               <IconCart />
             </MenuItem>
-          </button>
+          </Button>
         </nav>
       </div>
     </Container>

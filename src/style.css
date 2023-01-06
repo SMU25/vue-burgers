@@ -8,3 +8,9 @@ body {
   font-family: "Rubik", sans-serif;
   color: #414141;
 }
+
+@layer components {
+  .menu-item:hover path {
+    @apply fill-orange-primary;
+  }
+}

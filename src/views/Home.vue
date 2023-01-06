@@ -1,3 +1,7 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import Categories from "@/components/Categories/index.vue";
+</script>
 
-<template>Home</template>
+<template>
+  <Categories />
+</template>
