@@ -1,27 +1,35 @@
 <script lang="ts" setup>
 import { ref, toRefs } from "vue";
 import CategoryItem from "@/components/Categories/CategoryItem.vue";
-import { MENU_CATEGORIES } from "@/constants/categories";
 
-// interface Props {
-// }
+export interface Category {
+  id: number;
+  name: string;
+}
 
-// const props = defineProps<Props>();
-// const {  } = toRefs(props);
+interface Props {
+  categories: Category[];
+}
 
-const activeCategory = ref(MENU_CATEGORIES[0]);
-const setActiveCategory = (category: { id: number; name: string }) =>
+const props = defineProps<Props>();
+const { categories } = toRefs(props);
+
+const activeCategory = ref(categories.value[0]);
+
+const setActiveCategory = (category: Category) =>
   (activeCategory.value = category);
 </script>
 
 <template>
   <ul class="flex mt-20">
     <CategoryItem
-      v-for="category in MENU_CATEGORIES"
+      v-for="category in categories"
       :key="category.id"
-      :category="category"
-      :activeCategory="activeCategory"
-      :setActiveCategory="setActiveCategory"
-    />
+      :categoryId="category.id"
+      :activeCategoryId="activeCategory.id"
+      @click="setActiveCategory(category)"
+    >
+      {{ category.name }}
+    </CategoryItem>
   </ul>
 </template>

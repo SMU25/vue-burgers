@@ -2,14 +2,13 @@
 import Container from "@/components/Layouts/Container.vue";
 import Logo from "@/components/Logo.vue";
 import Search from "@/components/Search.vue";
-import Button from "@/components/Button/index.vue";
 import IconCart from "@/components/Icons/IconCart.vue";
 import IconOrders from "@/components/Icons/IconOrders.vue";
 import { PATHNAMES } from "@/constants/routes";
 import MenuItem from "./MenuItem.vue";
 
-const CART_NAME_MENU_ITEM = "Cart";
-const ORDERS_NAME_MENU_ITEM = "Orders";
+const CART_MENU_ITEM_NAME = "Cart";
+const ORDERS_MENU_ITEM_NAME = "Orders";
 </script>
 
 <template>
@@ -22,15 +21,15 @@ const ORDERS_NAME_MENU_ITEM = "Orders";
         <Search />
         <nav class="flex">
           <RouterLink :to="PATHNAMES.ORDERS">
-            <MenuItem :name="ORDERS_NAME_MENU_ITEM">
+            <MenuItem :name="ORDERS_MENU_ITEM_NAME">
               <IconOrders />
             </MenuItem>
           </RouterLink>
-          <Button>
-            <MenuItem class="ml-6" :name="CART_NAME_MENU_ITEM">
+          <RouterLink :to="PATHNAMES.CART">
+            <MenuItem class="ml-6" :name="CART_MENU_ITEM_NAME">
               <IconCart />
             </MenuItem>
-          </Button>
+          </RouterLink>
         </nav>
       </div>
     </Container>

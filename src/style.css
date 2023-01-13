@@ -13,4 +13,8 @@ body {
   .menu-item:hover path {
     @apply fill-orange-primary;
   }
+
+  .counter-icon:hover path {
+    @apply fill-green-primary;
+  }
 }
