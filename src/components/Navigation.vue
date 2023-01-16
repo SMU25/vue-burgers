@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { computed } from "vue";
+import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { PATHNAMES } from "@/constants/routes";
 
@@ -17,7 +17,7 @@ const isHomepage = computed(() => route.path === PATHNAMES.HOME);
 
 <template>
   <ul class="flex">
-    <li v-if="!isHomepage" :class="['flex', NAVIGATION_ITEM_CLASS_NAME]">
+    <li :class="['flex', NAVIGATION_ITEM_CLASS_NAME, { hidden: isHomepage }]">
       <RouterLink :to="PATHNAMES.HOME">
         {{ MAIN_PAGE_NAME }}
       </RouterLink>

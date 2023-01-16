@@ -4,7 +4,8 @@ import Button from "@/components/Button/index.vue";
 import IconMinus from "./Icons/IconMinus.vue";
 import IconPlus from "./Icons/IconPlus.vue";
 
-const BUTTON_CLASS_NAME = "!rounded-full hover:bg-white counter-icon";
+const BUTTON_CLASS_NAME =
+  "!rounded-full hover:bg-white hover:fill-path--green-primary";
 
 type IteratorFunc = () => void;
 
@@ -24,7 +25,9 @@ const { onClickMinus, onClickPlus } = toRefs(props);
     <Button :class="BUTTON_CLASS_NAME" @click="onClickMinus">
       <IconMinus />
     </Button>
-    <span> <slot /> </span>
+    <span class="mx-2">
+      <slot />
+    </span>
     <Button :class="BUTTON_CLASS_NAME" @click="onClickPlus">
       <IconPlus />
     </Button>

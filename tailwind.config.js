@@ -12,21 +12,32 @@ module.exports = {
         },
         green: {
           primary: "#70C05B",
+          hard: "#008C49",
         },
         orange: {
           primary: "#FF6633",
         },
+      },
+      fontSize: {
+        64: "64px",
       },
       lineHeight: {
         150: "150%",
       },
       spacing: {
         1.75: "7px",
+        13: "52px",
+        15: "60px",
       },
       maxWidth: {
+        30: "120px",
         68: "272px",
         112.5: "450px",
         302: "1208px",
+        "6.5/10": "65%",
+      },
+      maxHeight: {
+        25: "100px",
       },
       boxShadow: {
         "light-bottom-fog": "2px 4px 8px rgba(0, 0, 0, 0.1);",

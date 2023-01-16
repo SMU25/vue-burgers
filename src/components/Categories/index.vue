@@ -21,7 +21,7 @@ const setActiveCategory = (category: Category) =>
 </script>
 
 <template>
-  <ul class="flex mt-20">
+  <ul class="flex mt-10">
     <CategoryItem
       v-for="category in categories"
       :key="category.id"

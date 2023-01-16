@@ -10,11 +10,11 @@ body {
 }
 
 @layer components {
-  .menu-item:hover path {
+  .fill-path--orange-primary path {
     @apply fill-orange-primary;
   }
 
-  .counter-icon:hover path {
+  .fill-path--green-primary path {
     @apply fill-green-primary;
   }
 }

@@ -24,7 +24,7 @@ const inputValue = ref("");
       />
     </div>
     <Button
-      class="h-full rounded-r hover:bg-gray-lightest active:bg-gray-light active:brightness-120"
+      class="rounded-r hover:bg-gray-lightest active:bg-gray-light active:brightness-120 !translate-y-0"
     >
       <img
         class="px-2"

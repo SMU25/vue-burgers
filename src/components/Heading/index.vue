@@ -13,7 +13,7 @@ const { type: Heading } = h(headingLevel?.value || HeadingLevels.H3);
 </script>
 
 <template>
-  <Heading class="text-4xl font-bold leading-150">
+  <Heading class="font-bold leading-150">
     <slot />
   </Heading>
 </template>
