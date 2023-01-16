@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #fbf8ec;
+  margin: 0;
+  font-family: "Rubik", sans-serif;
+  color: #414141;
+}
+
+@layer components {
+  .fill-path--orange-primary path {
+    @apply fill-orange-primary;
+  }
+
+  .fill-path--green-primary path {
+    @apply fill-green-primary;
+  }
+}

@@ -10,8 +10,12 @@ const { name } = toRefs(props);
 </script>
 
 <template>
-  <div class="flex flex-col items-center">
-    <slot class="width-6 height-6" />
-    <p class="mt-2 capitalize text-xs leading-150">{{ name }}</p>
+  <div
+    class="flex flex-col items-center hover:text-orange-primary hover:fill-path--orange-primary"
+  >
+    <slot />
+    <p class="mt-2 capitalize text-xs leading-150">
+      {{ name }}
+    </p>
   </div>
 </template>
