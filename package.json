@@ -11,7 +11,6 @@
     "autoprefixer": "^10",
     "core-js": "^3.8.3",
     "date-fns": "^2.29.3",
-    "node-sass": "^8.0.0",
     "postcss": "^8",
     "tailwindcss": "^3",
     "vue": "^3.2.13",
