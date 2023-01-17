@@ -3,19 +3,17 @@ import { toRefs } from "vue";
 import Heading from "@/components/Heading/index.vue";
 import { HeadingLevels } from "@/components/Heading/types";
 import Counter from "@/components/Counter.vue";
-import { IProduct } from "@/types/product";
+import { ICartItem } from "@/types/cartItem";
 
 const PRICE_INFO_FOR_ONE_PCS = "for 1 pcs.";
 
 interface Props {
-  product: IProduct;
-  totalPrice: number;
-  totalCount: number;
+  cartItem: ICartItem;
 }
-//CHANGE - винести  в тип елемент корзини
 
 const props = defineProps<Props>();
-const { imgUrl, title, category, price } = toRefs(props.product);
+const { imgUrl, title, category, price } = toRefs(props.cartItem.product);
+const { totalPrice, totalCount } = toRefs(props.cartItem);
 </script>
 
 <template>

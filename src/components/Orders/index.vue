@@ -14,6 +14,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3666-3061-4134-b561-383761656630/-/resize/720x/-/format/webp/_.jpg",
         category: "burgers",
         price: 2,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "2",
@@ -22,6 +24,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild6561-6132-4932-b436-356262363431/-/resize/720x/-/format/webp/__.jpg",
         category: "burgers",
         price: 2.1,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "3",
@@ -30,6 +34,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3737-3366-4537-b961-393062393237/-/resize/720x/-/format/webp/_.jpg",
         category: "burgers",
         price: 3,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "4",
@@ -38,6 +44,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3032-3763-4537-b364-366639313061/-/resize/720x/-/format/webp/photo.jpg",
         category: "burgers",
         price: 2,
+        totalPrice: 123,
+        totalCount: 123,
       },
     ],
   },
@@ -53,6 +61,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3666-3061-4134-b561-383761656630/-/resize/720x/-/format/webp/_.jpg",
         category: "burgers",
         price: 2,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "2",
@@ -61,6 +71,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild6561-6132-4932-b436-356262363431/-/resize/720x/-/format/webp/__.jpg",
         category: "burgers",
         price: 2.1,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "3",
@@ -69,6 +81,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3737-3366-4537-b961-393062393237/-/resize/720x/-/format/webp/_.jpg",
         category: "burgers",
         price: 3,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "4",
@@ -77,6 +91,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3032-3763-4537-b364-366639313061/-/resize/720x/-/format/webp/photo.jpg",
         category: "burgers",
         price: 2,
+        totalPrice: 123,
+        totalCount: 123,
       },
     ],
   },
@@ -92,6 +108,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3666-3061-4134-b561-383761656630/-/resize/720x/-/format/webp/_.jpg",
         category: "burgers",
         price: 2,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "2",
@@ -100,6 +118,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild6561-6132-4932-b436-356262363431/-/resize/720x/-/format/webp/__.jpg",
         category: "burgers",
         price: 2.1,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "3",
@@ -108,6 +128,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3737-3366-4537-b961-393062393237/-/resize/720x/-/format/webp/_.jpg",
         category: "burgers",
         price: 3,
+        totalPrice: 123,
+        totalCount: 123,
       },
       {
         id: "4",
@@ -116,6 +138,8 @@ const MOCK_ITEMS = [
           "https://thumb.tildacdn.com/tild3032-3763-4537-b364-366639313061/-/resize/720x/-/format/webp/photo.jpg",
         category: "burgers",
         price: 2,
+        totalPrice: 123,
+        totalCount: 123,
       },
     ],
   },

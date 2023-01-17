@@ -4,7 +4,7 @@ import Button from "@/components/Button/index.vue";
 
 const PLACEHOLDER_TEXT = "Search products...";
 
-const SEARCH_IMG = {
+const ICON_SEARCH = {
   SIZE: 50,
   ALT_TEXT: "search",
 };
@@ -27,11 +27,11 @@ const inputValue = ref("");
       class="h-full rounded-r hover:bg-gray-lightest active:bg-gray-light active:brightness-120 !translate-y-0"
     >
       <img
-        class="px-2"
+        class="p-2"
         src="@/assets/search.svg"
-        :width="SEARCH_IMG.SIZE"
-        :height="SEARCH_IMG.SIZE"
-        :alt="SEARCH_IMG.ALT_TEXT"
+        :width="ICON_SEARCH.SIZE"
+        :height="ICON_SEARCH.SIZE"
+        :alt="ICON_SEARCH.ALT_TEXT"
       />
     </Button>
   </div>

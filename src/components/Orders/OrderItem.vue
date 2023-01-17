@@ -24,7 +24,7 @@ const date = format(createdAt.value, DATE_FORMAT);
   <div class="mb-24">
     <Products :items="items">
       <template #heading>
-        {{ HEADING }}<span class="ml-3">{{ `#${id}` }}</span>
+        {{ HEADING }}<span class="ml-3">#{{ id }}</span>
       </template>
       <template #info>
         <div class="flex justify-between items-center mt-2 leading-150">

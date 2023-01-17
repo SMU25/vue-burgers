@@ -94,7 +94,7 @@ const MOCK_CART_ITEMS: any = {
     <CartItem
       v-for="key in Object.keys(MOCK_CART_ITEMS)"
       :key="key"
-      :="MOCK_CART_ITEMS[key]"
+      :cartItem="MOCK_CART_ITEMS[key]"
     />
   </div>
 </template>

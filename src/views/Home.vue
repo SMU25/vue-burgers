@@ -153,7 +153,7 @@ const MOCK_ITEMS = [
 
 <template>
   <Categories :categories="MENU_CATEGORIES" />
-  <template v-if="true">
+  <!-- <template v-if="true">
     <Products
       v-for="{ id, name } in MENU_CATEGORIES"
       :key="id"
@@ -162,5 +162,5 @@ const MOCK_ITEMS = [
       isFilter
     />
   </template>
-  <Products v-else :title="MENU_CATEGORIES[1].name" :items="MOCK_ITEMS" />
+  <Products v-else :title="MENU_CATEGORIES[1].name" :items="MOCK_ITEMS" /> -->
 </template>

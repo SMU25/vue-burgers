@@ -1,12 +1,9 @@
 <script lang="ts" setup>
-import { toRefs } from "vue";
-
 interface Props {
   name: string;
 }
 
 const props = defineProps<Props>();
-const { name } = toRefs(props);
 </script>
 
 <template>
@@ -15,7 +12,7 @@ const { name } = toRefs(props);
   >
     <slot />
     <p class="mt-2 capitalize text-xs leading-150">
-      {{ name }}
+      {{ props.name }}
     </p>
   </div>
 </template>

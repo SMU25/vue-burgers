@@ -2,12 +2,13 @@
 import { toRefs, computed } from "vue";
 import Heading from "@/components/Heading/index.vue";
 import { IProduct } from "@/types/product";
+import { IOrderProduct } from "@/types/order";
 import Product from "./Product.vue";
 
 interface Props {
   isFilter?: boolean;
   title?: string;
-  items: IProduct[];
+  items: IProduct[] | IOrderProduct[];
 }
 //CHANGE - винести в загальний тип і передивитися усі мої типи,спробувати їх винести
 // додати типи в рефи , там де значення має більше 1 типу

@@ -14,18 +14,20 @@ const CART_MENU_ITEM_NAME = "Cart";
 const ORDERS_MENU_ITEM_NAME = "Orders";
 
 const countCartItems = 100 > MAX_COUNT_SHOWN_CART_ITEMS ? "99+" : 99;
-//CHANGE - винестив  функцію
+//CHANGE - винести в  функцію
 </script>
 
 <template>
-  <header class="bg-white py-5 px-4 shadow-light-bottom-fog">
+  <header class="bg-white py-5 shadow-light-bottom-fog">
     <Container>
-      <div class="flex justify-between">
-        <RouterLink :to="PATHNAMES.HOME">
+      <div
+        class="flex justify-between items-center sm:items-stretch flex-wrap xl:flex-nowrap max-w-112.5 xl:max-w-full mx-auto xl:mx-0"
+      >
+        <RouterLink class="w-2/3 sm:w-auto" :to="PATHNAMES.HOME">
           <Logo />
         </RouterLink>
-        <Search />
-        <nav class="flex">
+        <Search class="order-last xl:order-none mt-5 xl:mt-0" />
+        <nav class="flex xl:ml-0">
           <RouterLink :to="PATHNAMES.ORDERS">
             <MenuItem :name="ORDERS_MENU_ITEM_NAME">
               <IconOrders />

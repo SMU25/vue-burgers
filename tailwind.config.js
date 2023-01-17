@@ -48,7 +48,19 @@ module.exports = {
       brightness: {
         120: "1.20",
       },
+      screens: {
+        default: "0px",
+        xs: "360px",
+        sm: "450px",
+        md: "",
+        // lg: "768px",
+        // gl: "",
+        xl: "1024px",
+      },
     },
   },
-  plugins: [],
+  plugins: [require("tailwind-scrollbar")],
+  variants: {
+    scrollbar: ["rounded"],
+  },
 };
