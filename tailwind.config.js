@@ -52,9 +52,6 @@ module.exports = {
         default: "0px",
         xs: "360px",
         sm: "450px",
-        md: "",
-        // lg: "768px",
-        // gl: "",
         xl: "1024px",
       },
     },
@@ -64,3 +61,7 @@ module.exports = {
     scrollbar: ["rounded"],
   },
 };
+
+// md: "",
+// lg: "768px",
+// gl: "",
