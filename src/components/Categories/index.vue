@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-import { ref, toRefs } from "vue";
+import { ref } from "vue";
 import CategoryItem from "@/components/Categories/CategoryItem.vue";
 
 export interface Category {
   id: number;
   name: string;
 }
+//CHANGE - винести в загальний тип
 
 interface Props {
   categories: Category[];
 }
 
 const props = defineProps<Props>();
-const { categories } = toRefs(props);
 
-const activeCategory = ref(categories.value[0]);
+const activeCategory = ref(props.categories[0]);
 
 const setActiveCategory = (category: Category) =>
   (activeCategory.value = category);

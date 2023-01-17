@@ -18,6 +18,8 @@ const TOTAL_COUNT_PARAM_TEXT = "pcs.";
 const CONFIRM_ORDER_BUTTON_NAME = "Confirm order";
 
 const { name } = router.currentRoute.value;
+
+//CHANGE -  кнопка очистити корзину зліва над продуктами + кнопка видалення товару із корзини для кожного або зробити ,як на дизайні , щоб видаляти чекбоксами
 </script>
 
 <template>
@@ -39,17 +41,16 @@ const { name } = router.currentRoute.value;
             {{ TOTAL_COUNT_PARAM_NAME }}
           </span>
           <span>
-            {{ 3 }}
-            {{ TOTAL_COUNT_PARAM_TEXT }}
+            {{ 3 }}<span class="ml-1">{{ TOTAL_COUNT_PARAM_TEXT }}</span>
           </span>
         </p>
         <p :class="PARAM_CLASS_NAME">
           <span :class="PARAM_NAME_CLASS_NAME">
             {{ TOTAL_PRICE_PARAM_NAME }}
           </span>
-          <span class="text-2xl font-bold"
-            >{{ 32131 }}<span class="ml-1">$</span></span
-          >
+          <span class="text-2xl font-bold">
+            {{ 32131 }}<span class="ml-1">$</span>
+          </span>
         </p>
       </div>
       <Button class="w-full text-2xl" :variant="ButtonVariants.PRIMARY">

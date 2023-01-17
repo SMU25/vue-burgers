@@ -123,7 +123,7 @@ const MOCK_ITEMS = [
 </script>
 
 <template>
-  <div class="mt-15">
+  <div>
     <OrderItem v-for="item in MOCK_ITEMS" :key="item.id" :order="item" />
   </div>
 </template>

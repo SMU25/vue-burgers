@@ -1,17 +1,16 @@
 <script lang="ts" setup>
 import { toRefs } from "vue";
 import Button from "@/components/Button/index.vue";
+import { VoidFunction } from "@/types";
 import IconMinus from "./Icons/IconMinus.vue";
 import IconPlus from "./Icons/IconPlus.vue";
 
 const BUTTON_CLASS_NAME =
   "!rounded-full hover:bg-white hover:fill-path--green-primary";
 
-type IteratorFunc = () => void;
-
 interface Props {
-  onClickMinus: IteratorFunc;
-  onClickPlus: IteratorFunc;
+  onClickMinus: VoidFunction;
+  onClickPlus: VoidFunction;
 }
 
 const props = defineProps<Props>();

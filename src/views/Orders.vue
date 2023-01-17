@@ -5,6 +5,8 @@ import { HeadingLevels } from "@/components/Heading/types";
 import Orders from "@/components/Orders/index.vue";
 
 const { name } = router.currentRoute.value;
+
+//CHANGE -  Додати кількість елементів кожного продукту ,які було замовлено,
 </script>
 
 <template>

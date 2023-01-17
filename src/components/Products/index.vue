@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { toRefs, computed } from "vue";
 import Heading from "@/components/Heading/index.vue";
-import Product from "./Product.vue";
 import { IProduct } from "@/types/product";
+import Product from "./Product.vue";
 
 interface Props {
   isFilter?: boolean;
@@ -23,13 +23,13 @@ const filteredItems = computed(() =>
 </script>
 
 <template>
-  <div v-if="filteredItems.length" class="pb-5">
-    <Heading class="my-10 capitalize text-4xl">
+  <div v-if="filteredItems.length" class="mt-10 pb-5">
+    <Heading class="capitalize text-4xl">
       {{ title }}
       <slot name="heading" />
     </Heading>
     <slot name="info" />
-    <div class="grid grid-cols-4 gap-10">
+    <div class="grid grid-cols-4 gap-10 mt-10">
       <Product v-for="item in filteredItems" :key="item.id" :product="item" />
     </div>
   </div>

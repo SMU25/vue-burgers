@@ -3,7 +3,7 @@ import { computed, ref } from "vue";
 import { useRoute } from "vue-router";
 import { PATHNAMES } from "@/constants/routes";
 
-const CHEVRON_ICON_ALT_TEXT = "chevron";
+const ICON_CHEVRON_ALT_TEXT = "chevron";
 
 const NAVIGATION_ITEM_CLASS_NAME = "capitalize leading-150";
 
@@ -24,7 +24,7 @@ const isHomepage = computed(() => route.path === PATHNAMES.HOME);
       <img
         class="mx-6"
         src="@/assets/chevron-right.svg"
-        :alt="CHEVRON_ICON_ALT_TEXT"
+        :alt="ICON_CHEVRON_ALT_TEXT"
       />
     </li>
     <li :class="['flex text-gray-hard', NAVIGATION_ITEM_CLASS_NAME]">

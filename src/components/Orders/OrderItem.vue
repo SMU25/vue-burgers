@@ -27,13 +27,13 @@ const date = format(createdAt.value, DATE_FORMAT);
         {{ HEADING }}<span class="ml-3">{{ `#${id}` }}</span>
       </template>
       <template #info>
-        <div
-          class="flex justify-between items-center mb-10 text-2xl leading-150"
-        >
-          <time class="font-bold" :datetime="date">
+        <div class="flex justify-between items-center mt-2 leading-150">
+          <time class="text-gray-hard font-bold" :datetime="date">
             {{ date }}
           </time>
-          <span>{{ totalPrice }}<span class="ml-1">$</span></span>
+          <span class="font-bold text-2xl">
+            {{ totalPrice }}<span class="ml-1">$</span>
+          </span>
         </div>
       </template>
     </Products>

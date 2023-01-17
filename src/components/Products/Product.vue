@@ -7,11 +7,11 @@ import { ButtonVariants } from "@/components/Button/types";
 import Counter from "@/components/Counter.vue";
 import { IProduct } from "@/types/product";
 
-export interface Props {
+const ADD_TO_CART_BUTTON_NAME = "Add to cart";
+
+interface Props {
   product: IProduct;
 }
-
-const ADD_TO_CART_BUTTON_NAME = "Add to cart";
 
 const props = defineProps<Props>();
 const { title, imgUrl, category, price } = toRefs(props.product);
