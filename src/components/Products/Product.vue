@@ -31,7 +31,7 @@ const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
         <span class="ml-1 text-lg font-bold">1</span>
       </div>
       <img
-        class="max-h-48.5 mx-auto rounded-t overflow-hidden"
+        class="max-h-30 xs:max-h-35.5 sm:max-h-39 md:max-h-48.5 mx-auto rounded-t overflow-hidden"
         :src="imgUrl"
         :alt="title"
       />
@@ -39,21 +39,28 @@ const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
     <div class="flex flex-col justify-between h-full p-2 overflow-hidden">
       <div class="flex justify-between items-baseline">
         <div class="max-w-6.5/10">
-          <Heading class="!font-medium" :headingLevel="HeadingLevels.H4">
+          <Heading
+            class="text-xs sm:text-sm md:text-base !font-medium"
+            :headingLevel="HeadingLevels.H4"
+          >
             {{ title }}
           </Heading>
-          <p class="capitalize text-gray-light text-sm leading-150">
+          <p
+            class="capitalize text-gray-light text-10 sm:text-xs md:text-sm leading-150"
+          >
             {{ category }}
           </p>
         </div>
-        <div class="text-lg font-semibold leading-none break-all">
+        <div
+          class="text-sm sm:text-base md:text-lg font-semibold leading-none break-all"
+        >
           {{ price }}<span class="ml-1">$</span>
         </div>
       </div>
-      <p class="h-full mt-2">this is perfect</p>
+      <p class="h-full mt-2 text-10 sm:text-xs md:text-base">this is perfect</p>
       <Button
         v-if="true"
-        class="justify-self-end w-full mt-2"
+        class="justify-self-end w-full mt-2 text-xs xs:text-sm sm:text-base"
         :variant="ButtonVariants.BORDERED_SECONDARY"
         >{{ ADD_TO_CART_BUTTON_NAME }}</Button
       >

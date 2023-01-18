@@ -28,7 +28,9 @@ const { name } = router.currentRoute.value;
     :headingLevel="HeadingLevels.H2"
   >
     {{ name }}
-    <CountLabel class="ml-7 py-1 px-2 text-base">
+    <CountLabel
+      class="ml-4 md:ml-5 lg:ml-7 py-0.5 md:py-1 px-1 md:px-2 text-xs md:text-sm lg:text-base"
+    >
       {{ 3213213 }}
     </CountLabel>
   </Heading>

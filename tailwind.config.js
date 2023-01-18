@@ -19,6 +19,8 @@ module.exports = {
         },
       },
       fontSize: {
+        8: "8px",
+        10: "10px",
         64: "64px",
       },
       lineHeight: {
@@ -41,6 +43,9 @@ module.exports = {
       },
       maxHeight: {
         25: "100px",
+        30: "120px",
+        35.5: "142px",
+        39: "156px",
         48.5: "194px",
       },
       boxShadow: {
