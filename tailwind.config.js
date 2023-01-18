@@ -42,7 +42,7 @@ module.exports = {
         "6.5/10": "65%",
       },
       maxHeight: {
-        25: "100px",
+        22: "88px",
         30: "120px",
         35.5: "142px",
         39: "156px",
@@ -63,7 +63,8 @@ module.exports = {
         sm: "450px",
         md: "524px",
         lg: "768px",
-        xl: "1024px",
+        gl: "1024px",
+        xl: "1440px",
       },
     },
   },
@@ -72,6 +73,3 @@ module.exports = {
     scrollbar: ["rounded"],
   },
 };
-
-// lg
-// gl: "",

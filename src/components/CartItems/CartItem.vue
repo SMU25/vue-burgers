@@ -17,16 +17,14 @@ const { totalPrice, totalCount } = toRefs(props.cartItem);
 </script>
 
 <template>
-  <div
-    class="flex justify-between max-h-25 bg-white mb-6 rounded shadow-card-edges"
-  >
+  <div class="flex justify-between bg-white mb-6 rounded shadow-card-edges">
     <div class="flex w-full">
       <div
-        class="flex justify-center items-center max-w-25 mb-3 rounded overflow-hidden shadow-card-edges"
+        class="flex justify-center items-center max-w-25 max-h-22 mb-3 rounded overflow-hidden shadow-card-edges"
       >
         <img :src="imgUrl" :alt="title" />
       </div>
-      <div class="my-3 ml-2">
+      <div class="w-full my-3 ml-2">
         <Heading class="!font-medium" :headingLevel="HeadingLevels.H4">
           {{ title }}
         </Heading>
@@ -41,16 +39,20 @@ const { totalPrice, totalCount } = toRefs(props.cartItem);
         </div>
       </div>
     </div>
-    <div class="flex ml-4">
+    <div
+      class="flex flex-col gl:flex-row items-end gl:items-stretch mb-3 gl:mb-0 ml-2 gl:ml-4 p-1 gl:p-0"
+    >
       <Counter
-        class="w-32 self-center"
+        class="w-32 gl:self-center"
         :onClickMinus="() => {}"
         :onClickPlus="() => {}"
       >
         {{ totalCount }}
         <!--CHANGE - totalCount > 99999 ? 99999 : totalCount ||||| max count 99999 -->
       </Counter>
-      <div class="w-40 ml-4 p-2 text-end text-lg font-bold">
+      <div
+        class="w-32 gl:w-40 mt-1 gl:mt-0 gl:ml-4 gl:p-2 text-end text-lg font-bold break-all"
+      >
         {{ totalPrice }}<span class="ml-1">$</span>
       </div>
     </div>

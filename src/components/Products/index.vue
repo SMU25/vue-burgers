@@ -31,7 +31,7 @@ const filteredItems = computed(() =>
     </Heading>
     <slot name="info" />
     <div
-      class="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 xl:gap-10 mt-2 lg:mt-10"
+      class="grid grid-cols-2 lg:grid-cols-3 gl:grid-cols-4 gap-4 md:gap-8 gl:gap-10 mt-2 lg:mt-10"
     >
       <Product v-for="item in filteredItems" :key="item.id" :product="item" />
     </div>
