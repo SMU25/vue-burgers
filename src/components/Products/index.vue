@@ -24,13 +24,15 @@ const filteredItems = computed(() =>
 </script>
 
 <template>
-  <div v-if="filteredItems.length" class="mt-10 pb-5">
-    <Heading class="capitalize text-4xl">
+  <div v-if="filteredItems.length" class="mt-2 md:mt-6 lg:mt-10 pb-5">
+    <Heading class="capitalize text-2xl md:text-3xl lg:text-4xl">
       {{ title }}
       <slot name="heading" />
     </Heading>
     <slot name="info" />
-    <div class="grid grid-cols-4 gap-10 mt-10">
+    <div
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 xl:gap-10 mt-2 lg:mt-10"
+    >
       <Product v-for="item in filteredItems" :key="item.id" :product="item" />
     </div>
   </div>

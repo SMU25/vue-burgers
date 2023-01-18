@@ -21,7 +21,7 @@ const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
 </script>
 
 <template>
-  <div class="flex flex-col max-w-68 bg-white rounded shadow-card-edges group">
+  <div class="flex flex-col bg-white rounded shadow-card-edges group">
     <div class="relative">
       <div
         v-if="totalCount"
@@ -30,7 +30,7 @@ const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
         <IconCart />
         <span class="ml-1 text-lg font-bold">1</span>
       </div>
-      <img class="rounded-t" :src="imgUrl" :alt="title" />
+      <img class="mx-auto rounded-t" :src="imgUrl" :alt="title" />
     </div>
     <div class="flex flex-col justify-between h-full p-2 overflow-hidden">
       <div class="flex justify-between">

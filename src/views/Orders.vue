@@ -11,7 +11,7 @@ const { name } = router.currentRoute.value;
 
 <template>
   <Heading
-    class="flex items-start capitalize text-64"
+    class="flex items-start capitalize text-4xl md:text-5xl lg:text-64"
     :headingLevel="HeadingLevels.H2"
   >
     {{ name }}

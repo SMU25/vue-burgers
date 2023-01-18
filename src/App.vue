@@ -6,7 +6,7 @@ import Navigation from "./components/Navigation.vue";
 
 <template>
   <Header />
-  <Container class="pb-40">
+  <Container class="pb-10 md:pb-20 lg:pb-40">
     <Navigation class="my-6" />
     <RouterView />
   </Container>

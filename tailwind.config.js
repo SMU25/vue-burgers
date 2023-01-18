@@ -52,6 +52,8 @@ module.exports = {
         default: "0px",
         xs: "360px",
         sm: "450px",
+        md: "524px",
+        lg: "768px",
         xl: "1024px",
       },
     },
@@ -62,6 +64,5 @@ module.exports = {
   },
 };
 
-// md: "",
-// lg: "768px",
+// lg
 // gl: "",
