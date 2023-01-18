@@ -40,10 +40,10 @@ const { totalPrice, totalCount } = toRefs(props.cartItem);
       </div>
     </div>
     <div
-      class="flex flex-col gl:flex-row items-end gl:items-stretch mb-3 gl:mb-0 ml-2 gl:ml-4 p-1 gl:p-0"
+      class="flex flex-col xl:flex-row items-end xl:items-stretch mb-3 xl:mb-0 ml-2 xl:ml-4 p-1 xl:p-0"
     >
       <Counter
-        class="w-32 gl:self-center"
+        class="w-32 xl:self-center"
         :onClickMinus="() => {}"
         :onClickPlus="() => {}"
       >
@@ -51,7 +51,7 @@ const { totalPrice, totalCount } = toRefs(props.cartItem);
         <!--CHANGE - totalCount > 99999 ? 99999 : totalCount ||||| max count 99999 -->
       </Counter>
       <div
-        class="w-32 gl:w-40 mt-1 gl:mt-0 gl:ml-4 gl:p-2 text-end text-lg font-bold break-all"
+        class="w-32 xl:w-40 mt-1 xl:mt-0 xl:ml-4 xl:p-2 text-end text-lg font-bold break-all"
       >
         {{ totalPrice }}<span class="ml-1">$</span>
       </div>

@@ -21,9 +21,9 @@ const countCartItems = 100 > MAX_COUNT_SHOWN_CART_ITEMS ? "99+" : 99;
   <header class="bg-white py-5 shadow-light-bottom-fog">
     <Container>
       <div
-        class="flex justify-between items-center gl:items-stretch flex-wrap gl:flex-nowrap mx-auto gl:mx-0"
+        class="flex justify-between items-center xl:items-stretch flex-wrap xl:flex-nowrap mx-auto xl:mx-0"
       >
-        <RouterLink class="w-full gl:w-auto mb-5 gl:mb-0" :to="PATHNAMES.HOME">
+        <RouterLink class="w-full xl:w-auto mb-5 xl:mb-0" :to="PATHNAMES.HOME">
           <Logo />
         </RouterLink>
         <Search
