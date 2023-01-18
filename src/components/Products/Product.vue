@@ -27,11 +27,11 @@ const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
         v-if="totalCount"
         class="absolute top-2 left-2 flex items-center bg-white p-1 rounded"
       >
-        <IconCart />
-        <span class="ml-1 text-lg font-bold">1</span>
+        <IconCart class="w-3 xs:w-4 sm:w-auto h-3 xs:h-4 sm:h-auto" />
+        <span class="ml-1 text-xs xs:text-sm sm:text-lg font-bold">1</span>
       </div>
       <img
-        class="max-h-30 xs:max-h-35.5 sm:max-h-39 md:max-h-48.5 mx-auto rounded-t overflow-hidden"
+        class="max-h-30 xs:max-h-35.5 sm:max-h-39 md:max-h-54.5 mx-auto rounded-t overflow-hidden"
         :src="imgUrl"
         :alt="title"
       />

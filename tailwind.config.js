@@ -46,7 +46,7 @@ module.exports = {
         30: "120px",
         35.5: "142px",
         39: "156px",
-        48.5: "194px",
+        54.5: "218px",
       },
       boxShadow: {
         "light-bottom-fog": "2px 4px 8px rgba(0, 0, 0, 0.1);",
