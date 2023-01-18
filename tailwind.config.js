@@ -31,6 +31,9 @@ module.exports = {
       },
       maxWidth: {
         25: "100px",
+        43: "172px",
+        58: "232px",
+        62: "248px",
         68: "272px",
         112.5: "450px",
         302: "1208px",
@@ -38,6 +41,7 @@ module.exports = {
       },
       maxHeight: {
         25: "100px",
+        48.5: "194px",
       },
       boxShadow: {
         "light-bottom-fog": "2px 4px 8px rgba(0, 0, 0, 0.1);",
@@ -50,7 +54,7 @@ module.exports = {
       },
       screens: {
         default: "0px",
-        xs: "360px",
+        xs: "380px",
         sm: "450px",
         md: "524px",
         lg: "768px",

@@ -27,7 +27,7 @@ const { totalPrice, totalCount } = toRefs(props.cartItem);
         <img :src="imgUrl" :alt="title" />
       </div>
       <div class="my-3 ml-2">
-        <Heading :headingLevel="HeadingLevels.H4">
+        <Heading class="!font-medium" :headingLevel="HeadingLevels.H4">
           {{ title }}
         </Heading>
         <p class="mt-1 capitalize text-gray-light text-sm">

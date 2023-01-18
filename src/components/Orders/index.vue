@@ -58,7 +58,7 @@ const MOCK_ITEMS = [
         id: "1",
         title: "BiBurger",
         imgUrl:
-          "https://thumb.tildacdn.com/tild3666-3061-4134-b561-383761656630/-/resize/720x/-/format/webp/_.jpg",
+          "https://thumb.tildacdn.com/tild3830-3733-4061-a539-666339396232/-/resize/534x/-/format/webp/photo.JPG",
         category: "burgers",
         price: 2,
         totalPrice: 123,

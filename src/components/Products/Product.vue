@@ -30,12 +30,16 @@ const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
         <IconCart />
         <span class="ml-1 text-lg font-bold">1</span>
       </div>
-      <img class="mx-auto rounded-t" :src="imgUrl" :alt="title" />
+      <img
+        class="max-h-48.5 mx-auto rounded-t overflow-hidden"
+        :src="imgUrl"
+        :alt="title"
+      />
     </div>
     <div class="flex flex-col justify-between h-full p-2 overflow-hidden">
-      <div class="flex justify-between">
+      <div class="flex justify-between items-baseline">
         <div class="max-w-6.5/10">
-          <Heading :headingLevel="HeadingLevels.H4">
+          <Heading class="!font-medium" :headingLevel="HeadingLevels.H4">
             {{ title }}
           </Heading>
           <p class="capitalize text-gray-light text-sm leading-150">
@@ -43,7 +47,7 @@ const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
           </p>
         </div>
         <div class="text-lg font-semibold leading-none break-all">
-          {{ price }}<span class="ml-1 text-xl">$</span>
+          {{ price }}<span class="ml-1">$</span>
         </div>
       </div>
       <p class="h-full mt-2">this is perfect</p>

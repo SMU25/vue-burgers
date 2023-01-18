@@ -14,7 +14,7 @@ const inputValue = ref("");
 
 <template>
   <div
-    class="flex items-center justify-between max-w-112.5 w-full border border-green-primary rounded"
+    class="flex items-center justify-between w-full border border-green-primary rounded"
   >
     <div class="w-full p-2">
       <input

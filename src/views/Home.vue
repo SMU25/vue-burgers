@@ -62,7 +62,7 @@ const MOCK_ITEMS = [
   },
   {
     id: "8",
-    title: "French Fries Standard, 100 g.",
+    title: "French Fries Standard, 100g.",
     imgUrl:
       "https://thumb.tildacdn.com/tild3830-3733-4061-a539-666339396232/-/resize/534x/-/format/webp/photo.JPG",
     category: "potato",
@@ -70,7 +70,7 @@ const MOCK_ITEMS = [
   },
   {
     id: "9",
-    title: "French Fries Big, 150 g.",
+    title: "French Fries Big, 150g.",
     imgUrl:
       "https://thumb.tildacdn.com/tild3830-3733-4061-a539-666339396232/-/resize/534x/-/format/webp/photo.JPG",
     category: "potato",
