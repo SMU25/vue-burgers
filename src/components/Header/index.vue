@@ -18,12 +18,17 @@ const countCartItems = 100 > MAX_COUNT_SHOWN_CART_ITEMS ? "99+" : 99;
 </script>
 
 <template>
-  <header class="bg-white py-5 shadow-light-bottom-fog">
+  <header
+    class="position sticky top-0 bg-white py-5 shadow-light-bottom-fog z-50"
+  >
     <Container>
       <div
         class="flex justify-between items-center xl:items-stretch flex-wrap xl:flex-nowrap mx-auto xl:mx-0"
       >
-        <RouterLink class="w-full xl:w-auto mb-5 xl:mb-0" :to="PATHNAMES.HOME">
+        <RouterLink
+          class="w-full xl:w-auto mb-1 sm:mb-2 lg:mb-5 xl:mb-0"
+          :to="PATHNAMES.HOME"
+        >
           <Logo />
         </RouterLink>
         <Search

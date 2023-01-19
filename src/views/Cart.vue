@@ -37,7 +37,7 @@ const { name } = router.currentRoute.value;
   <div class="flex flex-col md:flex-row mt-6 md:mt-10 lg:mt-15">
     <CartItems class="w-full lg:w-2/3" />
     <div
-      class="sticky top-13 lg:max-w-68 w-full md:w-3/4 lg:w-full h-fit mt-2 md:mt-8 lg:mt-13 ml-0 md:ml-8 lg:ml-15"
+      class="sticky top-50 lg:max-w-68 w-full md:w-3/4 lg:w-full h-fit mt-2 md:mt-8 lg:mt-13 ml-0 md:ml-8 lg:ml-15"
     >
       <div>
         <p :class="PARAM_CLASS_NAME">
