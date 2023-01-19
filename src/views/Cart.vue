@@ -8,8 +8,8 @@ import Button from "@/components/Button/index.vue";
 import { ButtonVariants } from "@/components/Button/types";
 
 const PARAM_CLASS_NAME =
-  "flex justify-between items-baseline py-6 border-gray-lightest border-t-2";
-const PARAM_NAME_CLASS_NAME = "text-gray-hard leading-150";
+  "flex justify-between items-baseline py-6 text-sm lg:text-base border-gray-lightest border-t-2";
+const PARAM_NAME_CLASS_NAME = "mr-1 text-gray-hard leading-150";
 
 const TOTAL_COUNT_PARAM_NAME = "Total count:";
 const TOTAL_PRICE_PARAM_NAME = "Total price:";
@@ -34,9 +34,11 @@ const { name } = router.currentRoute.value;
       {{ 3213213 }}
     </CountLabel>
   </Heading>
-  <div class="flex mt-15">
-    <CartItems />
-    <div class="sticky top-13 max-w-68 w-full h-fit mt-13 ml-15">
+  <div class="flex flex-col md:flex-row mt-6 md:mt-10 lg:mt-15">
+    <CartItems class="w-full lg:w-2/3" />
+    <div
+      class="sticky top-13 lg:max-w-68 w-full md:w-3/4 lg:w-full h-fit mt-2 md:mt-8 lg:mt-13 ml-0 md:ml-8 lg:ml-15"
+    >
       <div>
         <p :class="PARAM_CLASS_NAME">
           <span :class="PARAM_NAME_CLASS_NAME">
@@ -50,12 +52,12 @@ const { name } = router.currentRoute.value;
           <span :class="PARAM_NAME_CLASS_NAME">
             {{ TOTAL_PRICE_PARAM_NAME }}
           </span>
-          <span class="text-2xl font-bold">
+          <span class="text-base lg:text-2xl font-bold">
             {{ 32131 }}<span class="ml-1">$</span>
           </span>
         </p>
       </div>
-      <Button class="w-full text-2xl" :variant="ButtonVariants.PRIMARY">
+      <Button class="w-full lg:text-2xl" :variant="ButtonVariants.PRIMARY">
         {{ CONFIRM_ORDER_BUTTON_NAME }}
       </Button>
     </div>

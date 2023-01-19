@@ -149,6 +149,7 @@ const MOCK_ITEMS = [
     price: 100,
   },
 ];
+//CHANGE - activeCategory збивається коли ми ведемо пошук товару
 </script>
 
 <template>

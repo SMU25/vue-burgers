@@ -90,7 +90,7 @@ const MOCK_CART_ITEMS: any = {
 </script>
 
 <template>
-  <div class="w-2/3">
+  <div>
     <CartItem
       v-for="key in Object.keys(MOCK_CART_ITEMS)"
       :key="key"
