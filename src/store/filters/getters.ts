@@ -6,4 +6,4 @@ export const getters = {
     category.id === MENU_CATEGORIES[0].id,
 };
 
-//CHANGE - типізувати гетери
+//CHANGE - типізувати гетери , https://dev.to/3vilarthas/vuex-typescript-m4j

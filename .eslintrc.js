@@ -23,8 +23,8 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "vue/multi-word-component-names": 0,
-    "@typescript-eslint/no-unused-vars": "warning",
-    "vue/script-setup-uses-vars": "warning",
-    "@typescript-eslint/no-inferrable-types": "warning",
+    "@typescript-eslint/no-unused-vars": 1,
+    "vue/script-setup-uses-vars": 1,
+    "@typescript-eslint/no-inferrable-types": 1,
   },
 };

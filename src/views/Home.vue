@@ -11,7 +11,7 @@ import { ICategory } from "@/types/category";
 const store = useAppStore();
 
 const { isLoading, items } = toRefs(store.state.products);
-
+//CHANGE - use computed
 const { isShowAllCategories } = toRefs(store.getters);
 const activeCategory = computed(() => store.state.filters.category);
 const setCategory = (category: ICategory) =>
