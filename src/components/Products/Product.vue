@@ -16,8 +16,10 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-//CHANGE TYPE
-const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
+//CHANGE TYPE і удаляти опис в заказах
+const { title, imgUrl, category, price, description, totalCount } = toRefs(
+  props.product
+);
 </script>
 
 <template>
@@ -57,7 +59,9 @@ const { title, imgUrl, category, price, totalCount } = toRefs(props.product);
           {{ price }}<span class="ml-1">$</span>
         </div>
       </div>
-      <p class="h-full mt-2 text-10 sm:text-xs md:text-base">this is perfect</p>
+      <p class="h-full mt-2 text-10 sm:text-xs md:text-sm">
+        {{ description }}
+      </p>
       <Button
         v-if="true"
         class="justify-self-end w-full mt-2 text-xs xs:text-sm sm:text-base"

@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-import router from "@/router";
 import Heading from "@/components/Heading/index.vue";
 import { HeadingLevels } from "@/components/Heading/types";
 import CountLabel from "@/components/Labels/CountLabel.vue";
@@ -17,8 +16,6 @@ const TOTAL_COUNT_PARAM_TEXT = "pcs.";
 
 const CONFIRM_ORDER_BUTTON_NAME = "Confirm order";
 
-const { name } = router.currentRoute.value;
-
 //CHANGE -  кнопка очистити корзину зліва над продуктами + кнопка видалення товару із корзини для кожного або зробити ,як на дизайні , щоб видаляти чекбоксами
 </script>
 
@@ -27,7 +24,7 @@ const { name } = router.currentRoute.value;
     class="flex items-start capitalize text-4xl md:text-5xl lg:text-64"
     :headingLevel="HeadingLevels.H2"
   >
-    {{ name }}
+    {{ $route.name }}
     <CountLabel
       class="ml-4 md:ml-5 lg:ml-7 py-0.5 md:py-1 px-1 md:px-2 text-xs md:text-sm lg:text-base"
     >

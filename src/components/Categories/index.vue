@@ -1,18 +1,14 @@
 <script lang="ts" setup>
-import { ref } from "vue";
 import CategoryItem from "@/components/Categories/CategoryItem.vue";
 import { ICategory } from "@/types/category";
 
 interface Props {
+  activeCategory: ICategory;
+  setCategory: (category: ICategory) => void;
   categories: ICategory[];
 }
 
-const props = defineProps<Props>();
-
-const activeCategory = ref(props.categories[0]);
-
-const setActiveCategory = (category: ICategory) =>
-  (activeCategory.value = category);
+defineProps<Props>();
 </script>
 <template>
   <ul
@@ -23,7 +19,7 @@ const setActiveCategory = (category: ICategory) =>
       :key="category.id"
       :categoryId="category.id"
       :activeCategoryId="activeCategory.id"
-      @click="setActiveCategory(category)"
+      @click="setCategory(category)"
     >
       {{ category.name }}
     </CategoryItem>

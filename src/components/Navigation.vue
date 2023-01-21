@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { computed, ref } from "vue";
+//CHANGE - setting eslint
 import { useRoute } from "vue-router";
 import { PATHNAMES } from "@/constants/routes";
 
@@ -13,6 +14,8 @@ const MAIN_PAGE_NAME = "home";
 const route = useRoute();
 
 const isHomepage = computed(() => route.path === PATHNAMES.HOME);
+
+//CHANGE - можливо змінити тут умову на ім'я роута
 </script>
 
 <template>
