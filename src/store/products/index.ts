@@ -1,3 +1,5 @@
+import { Module } from "vuex";
+import { RootState } from "@/store";
 import { IProduct } from "@/types/product";
 import { mutations } from "./mutations";
 import { actions } from "./actions";
@@ -12,9 +14,8 @@ const initialState: IProductsState = {
   isLoading: false,
 };
 
-export default {
-  state: () => initialState,
-  //Тут може удалити колбек
+const products: Module<IProductsState, RootState> = {
+  state: initialState,
   getters: {
     //INFO тут у на іде підрахунок чогось, типу загальної вартості і т.д
   },
@@ -22,4 +23,4 @@ export default {
   actions,
 };
 
-// mapState, namespacased?, іменування з назвою модуля і функціїї капсом, винести назву типів в константу
+export default products;

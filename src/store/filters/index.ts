@@ -1,3 +1,5 @@
+import { Module } from "vuex";
+import { RootState } from "@/store";
 import { MENU_CATEGORIES } from "@/constants/categories";
 import { ICategory } from "@/types/category";
 import { getters } from "./getters";
@@ -11,9 +13,10 @@ const initialState: IFiltersState = {
   category: MENU_CATEGORIES[0],
 };
 
-export default {
-  state: () => initialState,
+const filters: Module<IFiltersState, RootState> = {
+  state: initialState,
   getters,
   mutations,
-  actions: {},
 };
+
+export default filters;

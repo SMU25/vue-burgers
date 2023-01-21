@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-import { computed, ref } from "vue";
-//CHANGE - setting eslint
+import { computed } from "vue";
 import { useRoute } from "vue-router";
 import { PATHNAMES } from "@/constants/routes";
 

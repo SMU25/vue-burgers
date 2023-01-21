@@ -1,13 +1,10 @@
+import { MutationTree } from "vuex";
 import { IFiltersState } from ".";
+import { FiltersMutationsTypes } from "./types";
 
-export const FILTERS_MUTATIONS_TYPES = {
-  SET_CATEGORY: "filters/SET_CATEGORY",
-};
-//CHANGE - може змінити назву і видалити приставку продукти + додати ім'я модуля та витягувати mapState екшени і з назвою methods:   ...mapActions('company', ['getCompanies', 'getEmployees'])
-
-export const mutations = {
-  [FILTERS_MUTATIONS_TYPES.SET_CATEGORY]: (
-    state: IFiltersState,
+export const mutations: MutationTree<IFiltersState> = {
+  [FiltersMutationsTypes.SET_CATEGORY]: (
+    state,
     payload: IFiltersState["category"]
   ) => (state.category = payload),
 };

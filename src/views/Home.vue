@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 import { toRefs, computed, watchEffect } from "vue";
 import { useAppStore } from "@/hooks/vuex";
-import { PRODUCTS_ACTIONS_TYPES } from "@/store/products/actions";
-import { FILTERS_MUTATIONS_TYPES } from "@/store/filters/mutations";
+import { ProductsActionsTypes } from "@/store/products/types";
+import { FiltersMutationsTypes } from "@/store/filters/types";
 import Categories from "@/components/Categories/index.vue";
 import Products from "@/components/Products/index.vue";
 import { MENU_CATEGORIES } from "@/constants/categories";
@@ -11,17 +11,17 @@ import { ICategory } from "@/types/category";
 const store = useAppStore();
 
 const { isLoading, items } = toRefs(store.state.products);
-//CHANGE - use computed
+
 const { isShowAllCategories } = toRefs(store.getters);
 const activeCategory = computed(() => store.state.filters.category);
 const setCategory = (category: ICategory) =>
-  store.commit(FILTERS_MUTATIONS_TYPES.SET_CATEGORY, category);
+  store.commit(FiltersMutationsTypes.SET_CATEGORY, category);
 
 //CHANGE - activeCategory збивається коли ми ведемо пошук товару
 
 watchEffect(() =>
   store.dispatch(
-    PRODUCTS_ACTIONS_TYPES.GET_PRODUCTS_ASYNC,
+    ProductsActionsTypes.GET_PRODUCTS_ASYNC,
     activeCategory.value.name
   )
 );

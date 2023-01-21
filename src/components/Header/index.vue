@@ -13,7 +13,8 @@ const MAX_COUNT_SHOWN_CART_ITEMS = 99;
 const CART_MENU_ITEM_NAME = "Cart";
 const ORDERS_MENU_ITEM_NAME = "Orders";
 
-const countCartItems = 100 > MAX_COUNT_SHOWN_CART_ITEMS ? "99+" : 99;
+const countCartItems =
+  100 > MAX_COUNT_SHOWN_CART_ITEMS ? `${MAX_COUNT_SHOWN_CART_ITEMS}+` : 99;
 //CHANGE - винести в  функцію
 </script>
 
