@@ -20,5 +20,5 @@ store.dispatch(OrdersActionsTypes.GET_ORDERS_ASYNC);
   >
     {{ $route.name }}
   </Heading>
-  <Orders :items="items" />
+  <Orders :isLoading="isLoading" :items="items" />
 </template>

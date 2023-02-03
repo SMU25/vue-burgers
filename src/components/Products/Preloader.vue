@@ -1,10 +1,19 @@
 <script lang="ts" setup>
 import Shimmer from "@/components/Shimmer/index.vue";
+
+interface Props {
+  isHideDesc?: boolean;
+}
+
+defineProps<Props>();
 </script>
 
 <template>
   <div
-    class="flex flex-col justify-between h-101.5 bg-white rounded shadow-card-edges"
+    :class="[
+      'flex flex-col justify-between h-101.5 bg-white rounded shadow-card-edges',
+      { 'h-72': isHideDesc },
+    ]"
   >
     <div class="h-full">
       <Shimmer
@@ -18,7 +27,7 @@ import Shimmer from "@/components/Shimmer/index.vue";
           </div>
           <Shimmer class="w-10 h-5" />
         </div>
-        <div>
+        <div v-if="!isHideDesc">
           <Shimmer class="w-11/12 h-3 mt-2" />
           <Shimmer class="h-3 mt-0.5" />
           <Shimmer class="w-10/12 h-3 mt-0.5" />
