@@ -1,7 +1,16 @@
 <script lang="ts" setup>
+import { toRefs } from "vue";
+import { useAppStore } from "@/hooks/vuex";
+import { OrdersActionsTypes } from "@/store/orders/types";
 import Heading from "@/components/Heading/index.vue";
 import { HeadingLevels } from "@/components/Heading/types";
 import Orders from "@/components/Orders/index.vue";
+
+const store = useAppStore();
+
+const { isLoading, items } = toRefs(store.state.orders);
+
+store.dispatch(OrdersActionsTypes.GET_ORDERS_ASYNC);
 </script>
 
 <template>
@@ -11,5 +20,5 @@ import Orders from "@/components/Orders/index.vue";
   >
     {{ $route.name }}
   </Heading>
-  <Orders />
+  <Orders :items="items" />
 </template>

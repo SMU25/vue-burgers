@@ -16,14 +16,14 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-//CHANGE TYPE і удаляти опис в заказах
+//CHANGE TYPE і удаляти опис в заказах + пофіксити відображення фотки і текстів
 const { title, imgUrl, category, price, description, totalCount } = toRefs(
   props.product
 );
 </script>
 
 <template>
-  <div class="flex flex-col bg-white rounded shadow-card-edges group">
+  <div class="flex flex-col bg-white rounded shadow-card-edges">
     <div class="relative">
       <div
         v-if="totalCount"

@@ -38,9 +38,15 @@ watchEffect(() =>
       v-for="{ id, name } in MENU_CATEGORIES"
       :key="id"
       :title="name"
+      :isLoading="isLoading"
       :items="items"
       isFilter
     />
   </template>
-  <Products v-else :title="activeCategory.name" :items="items" />
+  <Products
+    v-else
+    :title="activeCategory.name"
+    :isLoading="isLoading"
+    :items="items"
+  />
 </template>

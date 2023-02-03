@@ -10,8 +10,8 @@ export interface IProductsState {
 }
 
 const initialState: IProductsState = {
-  items: [],
   isLoading: false,
+  items: [],
 };
 
 const products: Module<IProductsState, RootState> = {
