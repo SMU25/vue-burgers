@@ -43,7 +43,7 @@ const MOCK_CART_ITEMS: any = {
       id: "18",
       title: "Water 0.5 l.",
       imgUrl:
-        "https://thumb.tildacdn.com/tild3937-3138-4364-b633-313964643861/-/resize/720x/-/format/webp/10.jpg",
+        "https://thumb.tildacdn.com/tild3830-3733-4061-a539-666339396232/-/resize/534x/-/format/webp/photo.JPG",
       category: "drinks",
       price: 100,
     },
@@ -55,7 +55,7 @@ const MOCK_CART_ITEMS: any = {
       id: "18",
       title: "Water 0.5 l.",
       imgUrl:
-        "https://thumb.tildacdn.com/tild3937-3138-4364-b633-313964643861/-/resize/720x/-/format/webp/10.jpg",
+        "https://thumb.tildacdn.com/tild3737-6464-4266-a434-366662633061/-/resize/246x/-/format/webp/photo.png",
       category: "drinks",
       price: 100,
     },
@@ -90,11 +90,11 @@ const MOCK_CART_ITEMS: any = {
 </script>
 
 <template>
-  <div class="w-2/3">
+  <div>
     <CartItem
       v-for="key in Object.keys(MOCK_CART_ITEMS)"
       :key="key"
-      :="MOCK_CART_ITEMS[key]"
+      :cartItem="MOCK_CART_ITEMS[key]"
     />
   </div>
 </template>

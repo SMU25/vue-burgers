@@ -7,9 +7,8 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-const { headingLevel } = toRefs(props);
 
-const { type: Heading } = h(headingLevel?.value || HeadingLevels.H3);
+const { type: Heading } = h(props.headingLevel || HeadingLevels.H3);
 </script>
 
 <template>

@@ -1,3 +1,5 @@
+export const ALL_CATEGORY_NAME = "all";
+
 export const MENU_CATEGORIES = [
   { id: 1, name: "all" },
   { id: 2, name: "burgers" },

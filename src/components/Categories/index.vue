@@ -1,33 +1,25 @@
 <script lang="ts" setup>
-import { ref, toRefs } from "vue";
 import CategoryItem from "@/components/Categories/CategoryItem.vue";
-
-export interface Category {
-  id: number;
-  name: string;
-}
+import { ICategory } from "@/types/category";
 
 interface Props {
-  categories: Category[];
+  activeCategory: ICategory;
+  setCategory: (category: ICategory) => void;
+  categories: ICategory[];
 }
 
-const props = defineProps<Props>();
-const { categories } = toRefs(props);
-
-const activeCategory = ref(categories.value[0]);
-
-const setActiveCategory = (category: Category) =>
-  (activeCategory.value = category);
+defineProps<Props>();
 </script>
-
 <template>
-  <ul class="flex mt-10">
+  <ul
+    class="flex mt-10 overflow-x-auto h-10 scrollbar-thin scrollbar-thumb-gray-light hover:scrollbar-thumb-gray-hard active:scrollbar-thumb-gray-hardtest scrollbar-track-inherit scrollbar-thumb-rounded-full scrollbar-track-rounded-full"
+  >
     <CategoryItem
       v-for="category in categories"
       :key="category.id"
       :categoryId="category.id"
       :activeCategoryId="activeCategory.id"
-      @click="setActiveCategory(category)"
+      @click="setCategory(category)"
     >
       {{ category.name }}
     </CategoryItem>

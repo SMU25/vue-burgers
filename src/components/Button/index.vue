@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { toRefs, computed } from "vue";
+import { computed } from "vue";
 import { BUTTON_VARIANTS_STYLE } from "./constants";
 import { ButtonVariants } from "./types";
 
@@ -8,10 +8,9 @@ interface Props {
 }
 
 const props = defineProps<Props>();
-const { variant } = toRefs(props);
 
 const activeVariant = computed(() =>
-  variant?.value ? variant?.value : ButtonVariants.DEFAULT
+  props.variant ? props.variant : ButtonVariants.DEFAULT
 );
 </script>
 

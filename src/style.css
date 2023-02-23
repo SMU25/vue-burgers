@@ -17,4 +17,6 @@ body {
   .fill-path--green-primary path {
     @apply fill-green-primary;
   }
+
+  /* CHANGE - подумати мож над іншою назвою класів */
 }

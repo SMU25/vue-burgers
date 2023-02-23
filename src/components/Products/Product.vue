@@ -5,39 +5,66 @@ import { HeadingLevels } from "@/components/Heading/types";
 import Button from "@/components/Button/index.vue";
 import { ButtonVariants } from "@/components/Button/types";
 import Counter from "@/components/Counter.vue";
+import IconCart from "@/components/Icons/IconCart.vue";
 import { IProduct } from "@/types/product";
-
-export interface Props {
-  product: IProduct;
-}
+import { IOrderProduct } from "@/types/order";
 
 const ADD_TO_CART_BUTTON_NAME = "Add to cart";
 
+interface Props {
+  product: IProduct | IOrderProduct;
+}
+
 const props = defineProps<Props>();
-const { title, imgUrl, category, price } = toRefs(props.product);
+//CHANGE TYPE і удаляти опис в заказах + пофіксити відображення фотки і текстів
+const { title, imgUrl, category, price, description, totalCount } = toRefs(
+  props.product
+);
 </script>
 
 <template>
-  <div class="flex flex-col max-w-68 bg-white rounded shadow-card-edges group">
-    <img class="rounded-t" :src="imgUrl" :alt="title" />
+  <div class="flex flex-col bg-white rounded shadow-card-edges">
+    <div class="relative">
+      <div
+        v-if="totalCount"
+        class="absolute top-2 left-2 flex items-center bg-white p-1 rounded"
+      >
+        <IconCart class="w-3 xs:w-4 sm:w-auto h-3 xs:h-4 sm:h-auto" />
+        <span class="ml-1 text-xs xs:text-sm sm:text-lg font-bold">1</span>
+      </div>
+      <img
+        class="max-h-30 xs:max-h-35.5 sm:max-h-39 md:max-h-54.5 mx-auto rounded-t overflow-hidden"
+        :src="imgUrl"
+        :alt="title"
+      />
+    </div>
     <div class="flex flex-col justify-between h-full p-2 overflow-hidden">
-      <div class="flex justify-between">
+      <div class="flex justify-between items-baseline">
         <div class="max-w-6.5/10">
-          <Heading :headingLevel="HeadingLevels.H4">
+          <Heading
+            class="text-xs sm:text-sm md:text-base !font-medium"
+            :headingLevel="HeadingLevels.H4"
+          >
             {{ title }}
           </Heading>
-          <p class="capitalize text-gray-light text-sm leading-150">
+          <p
+            class="capitalize text-gray-light text-10 sm:text-xs md:text-sm leading-150"
+          >
             {{ category }}
           </p>
         </div>
-        <div class="text-lg font-semibold leading-none break-all">
-          {{ price }}<span class="ml-1 text-xl">$</span>
+        <div
+          class="text-sm sm:text-base md:text-lg font-semibold leading-none break-all"
+        >
+          {{ price }}<span class="ml-1">$</span>
         </div>
       </div>
-      <p class="h-full mt-2">this is perfect</p>
+      <p class="h-full mt-2 text-10 sm:text-xs md:text-sm">
+        {{ description }}
+      </p>
       <Button
         v-if="true"
-        class="justify-self-end w-full mt-2"
+        class="justify-self-end w-full mt-2 text-xs xs:text-sm sm:text-base"
         :variant="ButtonVariants.BORDERED_SECONDARY"
         >{{ ADD_TO_CART_BUTTON_NAME }}</Button
       >

@@ -21,19 +21,24 @@ const date = format(createdAt.value, DATE_FORMAT);
 </script>
 
 <template>
-  <div class="mb-24">
+  <div class="mb-10 md:mb-16 lg:mb-24">
     <Products :items="items">
       <template #heading>
-        {{ HEADING }}<span class="ml-3">{{ `#${id}` }}</span>
+        {{ HEADING }}<span class="ml-3">#{{ id }}</span>
       </template>
       <template #info>
         <div
-          class="flex justify-between items-center mb-10 text-2xl leading-150"
+          class="flex justify-between items-center mt-2 pt-1 leading-150 border-gray-hardtest border-t-2"
         >
-          <time class="font-bold" :datetime="date">
+          <time
+            class="text-sm lg:text-base text-gray-hard font-bold"
+            :datetime="date"
+          >
             {{ date }}
           </time>
-          <span>{{ totalPrice }}<span class="ml-1">$</span></span>
+          <span class="font-bold text-lg md:text-xl lg:text-2xl">
+            {{ totalPrice }}<span class="ml-1">$</span>
+          </span>
         </div>
       </template>
     </Products>

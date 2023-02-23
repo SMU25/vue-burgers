@@ -2,11 +2,11 @@
 import { toRefs, computed } from "vue";
 import Button from "@/components/Button/index.vue";
 import { ButtonVariants } from "@/components/Button/types";
-import { Category } from "./index.vue";
+import { ICategory } from "@/types/category";
 
 interface Props {
-  categoryId: Category["id"];
-  activeCategoryId: Category["id"];
+  categoryId: ICategory["id"];
+  activeCategoryId: ICategory["id"];
 }
 
 const props = defineProps<Props>();
